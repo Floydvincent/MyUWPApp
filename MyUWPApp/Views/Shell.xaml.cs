@@ -9,7 +9,7 @@ namespace MyUWPApp.Views {
     // DOCS: https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-SplitView
     public sealed partial class Shell : Page, INotifyPropertyChanged {
         public static Shell Instance { get; set; }
-        public static HamburgerMenu HamburgerMenu { get { return Instance.MyHamburgerMenu; } }
+        public static HamburgerMenu HamburgerMenu => Instance.MyHamburgerMenu;
 
         public Shell(NavigationService navigationService) {
             Instance = this;
@@ -19,6 +19,8 @@ namespace MyUWPApp.Views {
 
         public bool IsBusy { get; set; } = false;
         public string BusyText { get; set; } = "Please wait...";
+        public HamburgerMenu MyHamburgerMenu { get; }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public static void SetBusy(bool busy, string text = null) {

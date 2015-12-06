@@ -10,30 +10,7 @@
       xmlns:views="using:MyUWPApp.Views" mc:Ignorable="d">
 
     <Controls:ModalDialog IsModal="{x:Bind IsBusy, Mode=OneWay}">
-        <Controls:ModalDialog.Content>
-            <Controls:HamburgerMenu x:Name="MyHamburgerMenu" IsFullScreen="False">
-
-                <Controls:HamburgerMenu.PrimaryButtons>
-                    <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:MainPage">
-                        <StackPanel Orientation="Horizontal">
-                            <SymbolIcon Width="48" Height="48" Symbol="Home" />
-                            <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Home" />
-                        </StackPanel>
-                    </Controls:HamburgerButtonInfo>
-                </Controls:HamburgerMenu.PrimaryButtons>
-
-                <Controls:HamburgerMenu.SecondaryButtons>
-                    <Controls:HamburgerButtonInfo PageType="views:SettingsPage">
-                        <StackPanel Orientation="Horizontal">
-                            <SymbolIcon Width="48" Height="48" Symbol="Setting" />
-                            <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Settings" />
-                        </StackPanel>
-                    </Controls:HamburgerButtonInfo>
-                </Controls:HamburgerMenu.SecondaryButtons>
-
-            </Controls:HamburgerMenu>
-
-        </Controls:ModalDialog.Content>
+        <CheckBox x:Name="checkBox" Content="check it out" RenderTransformOrigin="1.171,12.602" Height="178" Width="219"/>
         <Controls:ModalDialog.ModalContent>
 
             <Viewbox Height="32">
